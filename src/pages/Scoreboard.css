@@ -41,10 +41,6 @@
 	text-transform: capitalize;
 }
 
-.player-info svg {
-	margin-left: auto;
-}
-
 .player-info span {
 	position: absolute;
 
@@ -54,15 +50,20 @@
 	transform: translateY(-50%);
 }
 
-
-.scoreboard-actions{
+.scoreboard-actions {
 	margin-top: 1em;
-	
+
 	display: flex;
 	align-items: center;
 	gap: 1em;
 }
 
-.scoreboard-actions .simple-button{
+.scoreboard-actions .simple-button {
 	font-size: 1.5rem;
+}
+
+@media (max-width: 1280px) {
+	.player-info{
+		font-size: 2rem;
+	}
 }

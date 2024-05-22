@@ -7,6 +7,7 @@
 }
 
 .player-board-tile {
+	position: inherit;
 	min-width: 800px;
 
 	display: flex;
@@ -17,8 +18,51 @@
 
 .player-board-tile span {
 	font-size: 3rem;
+	text-transform: capitalize;
 }
 
-.player-board-tile svg {
+.player-board-tile .icon-button {
 	font-size: 3rem;
+}
+
+.player-board-tile .icon-button:last-of-type:hover {
+	color: green;
+}
+
+.player-info {
+	position: relative;
+	min-width: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em;
+
+	font-size: 3rem;
+	text-transform: capitalize;
+}
+
+.player-info svg {
+	margin-left: auto;
+}
+
+.player-info span {
+	position: absolute;
+
+	top: 60%;
+	right: 20%;
+
+	transform: translateY(-50%);
+}
+
+
+.scoreboard-actions{
+	margin-top: 1em;
+	
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.scoreboard-actions .simple-button{
+	font-size: 1.5rem;
 }

@@ -32,6 +32,9 @@ const Create = () => {
 						type='text'
 						onChange={(e) => setCurrentPlayer(e.currentTarget.value)}
 						ref={inputRef}
+						onKeyDown={(e) => {
+							if (e.key == 'Enter') addPlayer();
+						}}
 					/>
 					<button className='simple-button' onClick={() => addPlayer()}>
 						Add Player
@@ -43,7 +46,7 @@ const Create = () => {
 					{players.map((p) => (
 						<div className='player' key={p}>
 							<span>{p}</span>
-							<TiDelete onClick={() => removePlayer(p)} />
+							<TiDelete className='icon-button' onClick={() => removePlayer(p)} />
 						</div>
 					))}
 				</div>

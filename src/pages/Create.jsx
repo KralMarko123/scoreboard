@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { TiDelete } from 'react-icons/ti';
 import './page.css';
 import './Create.css';
@@ -7,6 +8,7 @@ const Create = () => {
 	const [currentPlayer, setCurrentPlayer] = useState('');
 	const [players, setPlayers] = useState([]);
 	const inputRef = useRef();
+	const navigate = useNavigate();
 
 	const addPlayer = () => {
 		if (currentPlayer.length === 0 || players.includes(currentPlayer)) return;
@@ -45,6 +47,16 @@ const Create = () => {
 						</div>
 					))}
 				</div>
+			</div>
+			<div className='third-section'>
+				{players.length > 0 && (
+					<button
+						className='simple-button'
+						onClick={() => navigate('/track', { state: { players: players } })}
+					>
+						Start
+					</button>
+				)}
 			</div>
 		</div>
 	);

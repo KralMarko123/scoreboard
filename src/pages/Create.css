@@ -14,7 +14,7 @@
 	font-size: 2rem;
 }
 
-.create .simple-button {
+.create .first-section .simple-button {
 	font-size: 2rem;
 }
 
@@ -45,4 +45,10 @@
 
 .player svg {
 	font-size: 2rem;
+	cursor: pointer;
+}
+
+
+.player svg:hover {
+	color: red;
 }

@@ -10,7 +10,7 @@ const Home = () => {
 			<h1 className='title'>Marko's Scoreboard</h1>
 			<h3 className='subtitle'>Create Players | Track Scores | Do Not Bother Me</h3>
 			<button className='simple-button' onClick={() => navigate('/create')}>
-				Start
+				Enter
 			</button>
 		</div>
 	);

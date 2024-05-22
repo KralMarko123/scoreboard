@@ -1,0 +1,24 @@
+.player-board {
+	margin-top: 3em;
+
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+}
+
+.player-board-tile {
+	min-width: 800px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em;
+}
+
+.player-board-tile span {
+	font-size: 3rem;
+}
+
+.player-board-tile svg {
+	font-size: 3rem;
+}

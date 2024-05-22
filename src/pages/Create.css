@@ -1,0 +1,48 @@
+.create {
+	justify-content: start;
+}
+
+.player-input {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+
+	gap: 1em;
+}
+
+.create .simple-input {
+	font-size: 2rem;
+}
+
+.create .simple-button {
+	font-size: 2rem;
+}
+
+.second-section {
+	margin-top: 3em;
+}
+
+.player-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.player {
+	min-width: 200px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	gap: 1em;
+}
+
+.player span {
+	font-family: var(--title-font);
+	font-size: 2rem;
+}
+
+.player svg {
+	font-size: 2rem;
+}

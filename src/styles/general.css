@@ -1,0 +1,39 @@
+.title {
+	font-family: 'Bebas Neue', sans-serif;
+	font-weight: bold;
+}
+
+.subtitle {
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+}
+
+.simple-button {
+	padding: 0.5em 1em;
+	background-color: transparent;
+	border-radius: 5px;
+	border: solid 2px black;
+	outline: none;
+
+	font-size: 1rem;
+	font-family: var(--base-font);
+	text-transform: uppercase;
+
+	cursor: pointer;
+}
+
+.simple-button:hover {
+	background-color: rgba(0, 0, 0, 0.125);
+}
+
+.simple-input {
+	height: fit-content;
+	margin: 0;
+	padding-bottom: 0.5em;
+	font-size: 1rem;
+
+	outline: none;
+	border: none;
+	border-bottom: 2px solid black;
+}

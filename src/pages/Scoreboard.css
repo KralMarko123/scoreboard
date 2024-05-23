@@ -7,7 +7,6 @@
 }
 
 .player-board-tile {
-	position: inherit;
 	min-width: 800px;
 
 	display: flex;
@@ -63,7 +62,56 @@
 }
 
 @media (max-width: 1280px) {
-	.player-info{
+	.player-info {
 		font-size: 2rem;
+	}
+
+	.player-board-tile .icon-button:first-of-type {
+		color: red;
+	}
+
+	.player-board-tile .icon-button:last-of-type {
+		color: green;
+	}
+}
+
+@media (max-width: 780px) {
+	.title {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.player-board {
+		width: 100%;
+		margin-top: 1em;
+		gap: 1em;
+	}
+
+	.player-board-tile {
+		width: 100%;
+		min-width: unset;
+
+		display: flex;
+		align-items: center;
+	}
+
+	.player-board-tile span {
+		font-size: 1.5rem;
+	}
+
+	.player-board-tile .icon-button {
+		font-size: 2rem;
+	}
+
+	.player-info {
+		width: 100%;
+		min-width: unset;
+		font-size: 1.5rem;
+		gap: 0.25em;
+	}
+
+	.scoreboard-actions .simple-button {
+		font-size: 0.75rem;
+		min-height: 100px;
 	}
 }

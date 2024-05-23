@@ -1,11 +1,27 @@
-.title{
-  font-size: 5rem;
+.title {
+	font-size: 5rem;
 }
 
-.subtitle{
-  letter-spacing: 1px;
+.subtitle {
+	letter-spacing: 1px;
 }
 
-.simple-button{
-  margin-top: 1em;
+.simple-button {
+	margin-top: 1em;
+}
+
+@media (max-width: 780px) {
+	.title {
+		font-size: 4rem;
+		text-align: center;
+	}
+
+	.subtitle {
+		letter-spacing: 1px;
+		text-align: center;
+	}
+
+	.simple-button {
+		margin-top: 1em;
+	}
 }

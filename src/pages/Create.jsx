@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TiDelete } from 'react-icons/ti';
+import { ROUTES } from '../constants/ROUTES';
 import './page.css';
 import './Create.css';
 
@@ -55,7 +56,7 @@ const Create = () => {
 				{players.length > 0 && (
 					<button
 						className='simple-button'
-						onClick={() => navigate('/track', { state: { players: players } })}
+						onClick={() => navigate(ROUTES.TRACK, { state: { players: players } })}
 					>
 						Start
 					</button>

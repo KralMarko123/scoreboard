@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { FaPlusCircle, FaMinusCircle } from 'react-icons/fa';
 import { TbSeparator } from 'react-icons/tb';
 import ConfettiExplosion from 'react-confetti-explosion';
+import { ROUTES } from '../constants/ROUTES';
 import './page.css';
 import './Scoreboard.css';
 
@@ -36,7 +37,7 @@ const Scoreboard = () => {
 		setScores({ ...updatedScores });
 
 		if (
-			playersThatShouldWin.includes(p.toLowerCase()) ||
+			(playersThatShouldWin.includes(p.toLowerCase()) && !decrease) ||
 			(playersThatShouldLose.includes(p.toLowerCase()) && decrease)
 		)
 			setIsExploding(true);
@@ -46,7 +47,11 @@ const Scoreboard = () => {
 		<div className='page score'>
 			<div>
 				{isExploding && (
-					<ConfettiExplosion particleCount={200} onComplete={() => setIsExploding(false)} />
+					<ConfettiExplosion
+						duration={1500}
+						particleCount={150}
+						onComplete={() => setIsExploding(false)}
+					/>
 				)}
 			</div>
 
@@ -67,7 +72,7 @@ const Scoreboard = () => {
 				))}
 			</div>
 			<div className='scoreboard-actions'>
-				<button className='simple-button' onClick={() => navigate('/create')}>
+				<button className='simple-button' onClick={() => navigate(ROUTES.CREATE)}>
 					Back to Player Selection
 				</button>
 				<button className='simple-button' onClick={() => resetScores()}>
